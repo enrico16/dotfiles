@@ -67,12 +67,3 @@ colorscheme tango3
 
 " allows sudo with :w!!
 cmap w!! %!sudo tee > /dev/null %
-
-" font
-set guifont=Monospace\ 8
-
-" window size
-"set lines=50 columns=90
-
-" disable toolbar
-set guioptions-=T
