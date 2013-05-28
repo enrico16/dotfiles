@@ -1,4 +1,4 @@
-Configuraion files for:
+Configuration files for:
 - bash
 - geany
 - R
