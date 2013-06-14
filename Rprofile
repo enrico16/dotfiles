@@ -5,9 +5,10 @@
 ##
 ## see help(Startup) for documentation on ~/.Rprofile and Rprofile.site
 
-options(repos=c("http://cran.ma.imperial.ac.uk", "http://R-Forge.R-project.org"))
+options(repos="http://cran.ma.imperial.ac.uk")
 options(BioC_mirror="http://mirrors.ebi.ac.uk/bioconductor/")
 options(width=150)
+options(stringsAsFactors=FALSE)
 
 .First <- function() {
 	source("http://bioconductor.org/biocLite.R")
