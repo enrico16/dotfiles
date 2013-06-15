@@ -63,7 +63,7 @@ set mouse=a
 set background=dark
 
 " set colorscheme
-colorscheme tango3
+"colorscheme tango3
 
 " allows sudo with :w!!
 cmap w!! %!sudo tee > /dev/null %
