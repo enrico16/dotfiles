@@ -12,7 +12,7 @@ HISTCONTROL=ignoredups:ignorespace
 # append to the history file, don't overwrite it
 shopt -s histappend
 # saves each command right after it's been executed, not at the end of the session
-PROMPT_COMMAND="history -n; history -a"
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=5000
