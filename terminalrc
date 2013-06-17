@@ -21,9 +21,6 @@ FontName=Monospace 8
 ScrollingLines=10000
 TitleMode=TERMINAL_TITLE_HIDE
 AccelSetTitle=F2
-ColorCursor=#262656568080
-TabActivityColor=#262656568080
-ColorBackground=#242424242424
 ColorPalette2=#66660a3d0a3d
 ColorPalette3=#000066661999
 ColorPalette4=#4ecf2e2e6666
@@ -41,4 +38,6 @@ ColorPalette15=#0000aaaaaaaa
 ColorPalette16=#52529393cccc
 ScrollingOnOutput=FALSE
 MiscToolbarDefault=FALSE
+ColorBackground=#242424242424
+ColorCursor=#55555555ffff
 
