@@ -107,6 +107,7 @@ fi
 export PS1='\[\e[1m\]┌─[\u@\h][\w]\n\[\e[1m\]└─[\$]\[\e[0m\] '
 
 # Additional PATHS
+export PATH=$PATH:$HOME/.scripts/
 export PATH=$PATH:$HOME/PhD/Scripts/Perl/
 export PATH=$PATH:$HOME/.homer/bin/
 export PATH=$PATH:$HOME/.bedtools/bin/
