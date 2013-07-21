@@ -1,3 +1,6 @@
+Dotfiles
+========
+
 Configuration files for:
 
 - bash
