@@ -5,6 +5,7 @@ Configuration files for:
 
 - bash
 - geany
+- git
 - R
 - screen
 - vim
