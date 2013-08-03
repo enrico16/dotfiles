@@ -83,6 +83,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+bind -m vi-insert "\C-l":clear-screen
 
 # alias for upgrading system
 alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --purge && sudo apt-get clean'

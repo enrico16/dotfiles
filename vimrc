@@ -1,48 +1,55 @@
 " .vimrc
 
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
+" debian compatibility
 runtime! debian.vim
 
 " no vi compatibility
 set nocompatible
 
-" directory
-set directory=/home/enrico/.vim
+" vim root directory
+set directory=~/.vim
 
-" disable backups (and swap)
+" vundle configuration
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" bundles
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-sensible'
+Bundle 'flazz/vim-colorschemes'
+
+" disable backups
 set nobackup
-set nowritebackup
+set nowritebackup	
 set noswapfile
+
+" general options
+set mouse=a	"enable mouse
+set wildmenu	"tab completion
+set backspace=indent,eol,start	"backspace behaviour
+set wrap	"wrap lines
+set autowrite	"automatically save before :next and :make 
+set hidden	"hide abandoned buffers 
+
+" interface
+set showcmd	"show commands
+set showmatch	"show matching bracket
+set ruler	"show cursor position
+set number	"show line numbers
+set cmdheight=2	"command line height
+set laststatus=2	"show status line
+set statusline=\ \%f%m%r%h%w\ ::\ %y\ [%{&ff}]\%=\ [%p%%:\ %l/%L]\	"status line config 
 
 " tabs and indentation
 set tabstop=4
+set shiftwidth=4
 set noexpandtab
 set smarttab
-set shiftwidth=4
-set backspace=indent,eol,start
+
+" indentation
 set autoindent
 set smartindent
-
-" show commands
-set showcmd
-
-" show line and column position of cursor
-set ruler
-
-" status bar
-set statusline=\ \%f%m%r%h%w\ ::\ %y\ [%{&ff}]\%=\ [%p%%:\ %l/%L]\ 
-set laststatus=2
-set cmdheight=1
-
-" textwidth
-set textwidth=0
-
-" formatting options
-set formatoptions=c,q,r,t
-
-" line numbers
-set number
 
 " search
 set hlsearch
@@ -52,18 +59,14 @@ set smartcase
 set wrapscan
 
 " syntax highlighting
-syntax on
+syntax enable
 filetype plugin on
 filetype indent on
 
-" enable mouse
-set mouse=a
-
-" set background
+" theme
 set background=dark
+colorscheme molokai
 
-" set colorscheme
-"colorscheme tango3
-
-" allows sudo with :w!!
-cmap w!! %!sudo tee > /dev/null %
+" advanced stuff
+cmap w!! w !sudo tee > /dev/null % "allows to write read-only wile with :w!!
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 
