@@ -21,29 +21,28 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
-Bundle 'jcfaria/Vim-R-plugin'
+Bundle 'Vim-R-plugin'
 Bundle 'ervandew/screen'
 
-" disable backups
-set nobackup
-set nowritebackup	
-set noswapfile
-
 " general options
+set nobackup	"disable backups
+set nowritebackup	"disable backups
+set noswapfile	"disable swapfile
 set title	"change terminal title
 set t_Co=256 "enable 256 colors 
 set t_ut=	"use correct backround color
 set history=1000	"commands in history
 set undolevels=1000	"undo operations
 set mouse=a	"enable mouse
-set wildmenu	"tab completion
+set wildmenu	"command completion
 set backspace=indent,eol,start	"backspace behaviour
 set wrap	"wrap lines
 set autowrite	"automatically save before :next and :make 
 set hidden	"hide abandoned buffers, don't close them
-set pastetoggle=<F2>
+set pastetoggle=<F2>	"enter paste mode
+let mapleader=","
 
 " interface
 set showcmd	"show commands
@@ -81,4 +80,5 @@ colorscheme molokai
 
 " advanced stuff
 cmap w!! w !sudo tee > /dev/null % "allows to write read-only wile with :w!!
+map <C-n> :NERDTreeToggle<CR>	"open NERDtree with CTRL-N
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 
