@@ -104,7 +104,6 @@ fi
 #fi
 
 # Custom PS1
-#export PS1='\[\e[1m\]┌─[\u@\h][\W]\n\[\e[1m\]└─[\$]\[\e[0m\] '
 export PS1='\[\e[1m\]┌─[\u@\h][\w]\n\[\e[1m\]└─[\$]\[\e[0m\] '
 
 # Additional PATHS
@@ -117,3 +116,9 @@ export PATH=$PATH:$HOME/.weblogo/
 export PATH=$PATH:$HOME/.meme/bin/
 export PATH=$PATH:$HOME/.blat/
 export PATH=$PATH:$HOME/.block_bootstrap/
+
+# Set TERM to 256 colors
+export TERM=xterm-256color
+
+# Set vim mode
+set -o vi

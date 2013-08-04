@@ -10,3 +10,4 @@ Configuration files for:
 - screen
 - vim
 - xfce4-terminal
+- xmodmap
