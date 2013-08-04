@@ -5,13 +5,19 @@
 ##
 ## see help(Startup) for documentation on ~/.Rprofile and Rprofile.site
 
+# options
 options(repos="http://cran.ma.imperial.ac.uk")
 options(BioC_mirror="http://mirrors.ebi.ac.uk/bioconductor/")
-options(width=150)
+#options(width=150)
 options(stringsAsFactors=FALSE)
 
+# libraries
+library(setwidth)
+
+# sources
+source("http://bioconductor.org/biocLite.R")
+
 .First <- function() {
-	source("http://bioconductor.org/biocLite.R")
 	cat("\n   Welcome to R!\n\n")
 }
 .Last <- function() {

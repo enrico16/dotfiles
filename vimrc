@@ -9,23 +9,6 @@ set nocompatible
 " vim root directory
 set directory=~/.vim
 
-" vundle configuration
-filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-" bundles
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-sensible'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'ervandew/supertab'
-Bundle 'Vim-R-plugin'
-Bundle 'ervandew/screen'
-
 " general options
 set nobackup	"disable backups
 set nowritebackup	"disable backups
@@ -78,7 +61,28 @@ filetype indent on
 set background=dark
 colorscheme molokai
 
+" vundle configuration
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" plugins
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-sensible'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'ervandew/supertab'
+Bundle 'ervandew/screen'
+Bundle 'Vim-R-plugin'
+Bundle 'git clone git://git.code.sf.net/p/vim-latex/vim-latex'
+
+" plugins configuration
+map <C-n> :NERDTreeToggle<CR>	"open NERDtree with CTRL-N
+"vimrplugin_tmux=0	"R plugin to use screen instead of tmux
+
 " advanced stuff
 cmap w!! w !sudo tee > /dev/null % "allows to write read-only wile with :w!!
-map <C-n> :NERDTreeToggle<CR>	"open NERDtree with CTRL-N
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 
