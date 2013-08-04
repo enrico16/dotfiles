@@ -77,11 +77,11 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'ervandew/screen'
 Bundle 'Vim-R-plugin'
-Bundle 'git clone git://git.code.sf.net/p/vim-latex/vim-latex'
+Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
 " plugins configuration
 map <C-n> :NERDTreeToggle<CR>	"open NERDtree with CTRL-N
-"vimrplugin_tmux=0	"R plugin to use screen instead of tmux
+let vimrplugin_tmux=0	"R plugin to use screen instead of tmux
 
 " advanced stuff
 cmap w!! w !sudo tee > /dev/null % "allows to write read-only wile with :w!!
