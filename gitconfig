@@ -3,7 +3,8 @@
 	email = enricoferrero86@gmail.com
 [core]
 	editor = vim
-	excludesfile = /home/enrico/.gitignore_global
+	excludesfile = ~/.gitignore_global
+	fileMode = false
 [merge]
 	tool = vimdiff
 [credential]
@@ -11,3 +12,6 @@
 [alias]
 	unstage = reset HEAD --
 	last = log -1 HEAD
+[http]
+[color]
+	ui = true
