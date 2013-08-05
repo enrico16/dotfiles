@@ -86,3 +86,9 @@ let vimrplugin_tmux=0	"R plugin to use screen instead of tmux
 " advanced stuff
 cmap w!! w !sudo tee > /dev/null % "allows to write read-only wile with :w!!
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 
+
+" easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
