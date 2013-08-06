@@ -12,6 +12,7 @@ options(BioC_mirror="http://mirrors.ebi.ac.uk/bioconductor/")
 options(stringsAsFactors=FALSE)
 
 # libraries
+library(vimcom)
 library(colorout)
 library(setwidth)
 

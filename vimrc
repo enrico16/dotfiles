@@ -13,9 +13,6 @@ set directory=~/.vim
 set nobackup	"disable backups
 set nowritebackup	"disable backups
 set noswapfile	"disable swapfile
-set title	"change terminal title
-set t_Co=256 "enable 256 colors 
-set t_ut=	"use correct backround color
 set history=1000	"commands in history
 set undolevels=1000	"undo operations
 set mouse=a	"enable mouse

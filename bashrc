@@ -117,8 +117,12 @@ export PATH=$PATH:$HOME/.meme/bin/
 export PATH=$PATH:$HOME/.blat/
 export PATH=$PATH:$HOME/.block_bootstrap/
 
-# Set TERM to 256 colors
-export TERM=xterm-256color
-
+# Set TERM to 256 colors inside and outside of screen
+if [ "screen" = "$TERM" ]
+then
+	export TERM=screen-256color
+else
+	export TERM=xterm-256color
+fi
 # Set vim mode
 set -o vi

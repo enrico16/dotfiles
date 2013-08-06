@@ -116,10 +116,3 @@ defnonblock 5
 # screen -t monkey ssh monkey
 # screen -t mail 8 mutt
 # screen -t daemon 9 tail -f /var/log/daemon.log
-
-
-# Enable 256 colors
-term screen-256color
-
-# Use correct background color
-defbce on
