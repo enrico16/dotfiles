@@ -54,6 +54,10 @@ syntax enable
 filetype plugin on
 filetype indent on
 
+" folding
+set foldmethod=syntax
+set nofoldenable
+
 " theme
 set background=dark
 colorscheme molokai
@@ -64,13 +68,8 @@ nnoremap gn :tabnew<Space>
 nnoremap gs :split<Space>
 nnoremap gv :vsplit<Space>
 noremap <C-n> :NERDTreeToggle<CR>
-" easily navigate splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 " clear highlights wth Ctrl-l
-"nnoremap <C-l> :nohl<CR><C-l>
+nnoremap <C-l> :nohl<CR><C-l>
 
 " vundle configuration
 filetype off
@@ -94,6 +93,7 @@ Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 let g:ctrlp_show_hidden = 1 "ctrlp to also index dotfiles
 let g:ctrlp_follow_symlinks = 0 "ctrlp to follow symlinks
 let vimrplugin_tmux=1 "R plugin to use screen instead of tmux
+let r_syntax_folding=1 " R code folding
 
 " advanced stuff
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 
