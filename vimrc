@@ -23,6 +23,7 @@ set autowrite "automatically save before :next and :make
 set hidden "hide abandoned buffers, don't close them
 set pastetoggle=<F2> "enter paste mode
 let mapleader=","
+let maplocalleader=";"
 
 " interface
 set showcmd "show commands
