@@ -2,6 +2,7 @@
 !*rc
 !*.conf
 !*.pl
+!*.md
 !*.R
 !*.sh
 !*.tex
