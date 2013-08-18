@@ -115,6 +115,7 @@ export PATH=$PATH:$HOME/.weblogo/
 export PATH=$PATH:$HOME/.meme/bin/
 export PATH=$PATH:$HOME/.blat/
 export PATH=$PATH:$HOME/.block_bootstrap/
+export PATH=$PATH:$HOME/.sopcast/
 
 # Set TERM to 256 colors inside and outside of screen
 if [ "screen" = "$TERM" ]
