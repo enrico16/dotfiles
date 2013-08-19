@@ -39,7 +39,6 @@ set shiftwidth=4
 set noexpandtab
 set smarttab
 set autoindent
-"set copyindent
 set smartindent
 set shiftround
 
@@ -80,6 +79,7 @@ call vundle#rc()
 " plugins
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
