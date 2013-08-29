@@ -64,12 +64,15 @@ colorscheme molokai
 
 " custom key mappings
 " open new files
-nnoremap gn :tabnew<Space>
-nnoremap gs :split<Space>
-nnoremap gv :vsplit<Space>
-noremap <C-n> :NERDTreeToggle<CR>
+nnoremap tt :tabnew<Space>
+nnoremap ss :split<Space>
+nnoremap vv :vsplit<Space>
+nnoremap <C-n> :NERDTreeToggle<CR>
 " clear highlights wth Ctrl-l
-nnoremap <C-l> :nohl<CR><C-l>
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+" insert new lines in normal mode
+nnoremap <Enter> o<ESC>
+nnoremap <S-Enter> O<ESC>
 
 " vundle configuration
 filetype off
@@ -80,7 +83,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
+"Bundle 'bling/vim-airline'
+"Bundle 'itchyny/lightline.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'tomasr/molokai'
 Bundle 'scrooloose/nerdtree'
