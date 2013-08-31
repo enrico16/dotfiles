@@ -84,9 +84,8 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
-"Bundle 'bling/vim-airline'
-"Bundle 'itchyny/lightline.vim'
+"Bundle 'Lokaltog/vim-powerline'
+Bundle 'itchyny/lightline.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'tomasr/molokai'
 Bundle 'scrooloose/nerdtree'
@@ -98,9 +97,7 @@ Bundle 'Vim-R-plugin'
 Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
 " plugins configuration
-let g:ctrlp_show_hidden = 1 "ctrlp to also index dotfiles
-let g:ctrlp_follow_symlinks = 0 "ctrlp to follow symlinks
-let vimrplugin_tmux=1 "R plugin to use screen instead of tmux
+let vimrplugin_tmux=0 "R plugin to use screen instead of tmux
 let r_syntax_folding=1 " R code folding
 
 " advanced stuff

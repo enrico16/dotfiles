@@ -76,11 +76,6 @@ termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
 # enabled if there is no hardstatus setting for your terminal)
 #
 #hardstatus lastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
-
-# Custom Status Bar
-#hardstatus off
-#hardstatus alwayslastline "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{y}%d.%m.%Y %{w}| %{g}%l %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
-#hardstatus alwayslastline "%{b dw} %H %{w}| %c %{w}| %d/%m/%Y %{w}| %l %{w}| %-Lw%{=b BW}%50>%n%f* %t%{-}%+Lw%<"
 hardstatus alwayslastline "%{b dd} %{b rd}%H%{b dd} | %c %{d}| %d/%m/%Y %{d}| %l %{d}| %-Lw%{=b Bd}%50>%n%f* %t%{-}%+Lw%<"
 
 # set these terminals up to be 'optimal' instead of vt100
