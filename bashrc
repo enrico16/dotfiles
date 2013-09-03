@@ -80,9 +80,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
 
 # alias for upgrading system
 alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --purge && sudo apt-get clean'
