@@ -70,9 +70,6 @@ nnoremap vv :vsplit<Space>
 nnoremap <C-n> :NERDTreeToggle<CR>
 " clear highlights wth Ctrl-l
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
-" insert new lines in normal mode
-nnoremap <Enter> o<ESC>
-nnoremap <S-Enter> O<ESC>
 
 " vundle configuration
 filetype off
