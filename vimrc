@@ -58,6 +58,10 @@ filetype indent on
 set foldmethod=syntax
 set nofoldenable
 
+" splits
+set splitright
+set splitbelow
+
 " theme
 set background=dark
 colorscheme molokai
@@ -81,7 +85,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
-"Bundle 'Lokaltog/vim-powerline'
 Bundle 'itchyny/lightline.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'tomasr/molokai'
