@@ -1,6 +1,7 @@
 *
 !*config
 !*rc
+!*.bib
 !*.conf
 !*.pl
 !*.md

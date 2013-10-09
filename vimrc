@@ -74,6 +74,8 @@ nnoremap vv :vsplit<Space>
 nnoremap <C-n> :NERDTreeToggle<CR>
 " clear highlights wth Ctrl-l
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+" spell check with F7
+nnoremap <silent> <F7> :setlocal spell! spelllang=en_gb<CR>
 
 " vundle configuration
 filetype off
@@ -94,11 +96,13 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'ervandew/screen'
 Bundle 'Vim-R-plugin'
-Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+"Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Bundle 'git://git.code.sf.net/p/atp-vim/code'
 
 " plugins configuration
 let vimrplugin_tmux=0 "R plugin to use screen instead of tmux
 let r_syntax_folding=1 " R code folding
+let g:Tex_DefaultTargetFormat='pdf' "LaTeX plugin to compile to PDF by default
 
 " advanced stuff
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 
