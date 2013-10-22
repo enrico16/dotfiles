@@ -96,8 +96,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'ervandew/screen'
 Bundle 'Vim-R-plugin'
-"Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
-Bundle 'git://git.code.sf.net/p/atp-vim/code'
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
 " plugins configuration
 let vimrplugin_tmux=0 "R plugin to use screen instead of tmux
