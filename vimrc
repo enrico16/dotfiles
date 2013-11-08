@@ -100,7 +100,6 @@ Bundle 'Vim-R-plugin'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
 " plugins configuration
-let vimrplugin_tmux=0 "R plugin to use screen instead of tmux
 let r_syntax_folding=1 " R code folding
 
 " advanced stuff
