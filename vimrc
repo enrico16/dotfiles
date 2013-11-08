@@ -102,7 +102,6 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box'
 " plugins configuration
 let vimrplugin_tmux=0 "R plugin to use screen instead of tmux
 let r_syntax_folding=1 " R code folding
-let g:Tex_DefaultTargetFormat='pdf' "LaTeX plugin to compile to PDF by default
 
 " advanced stuff
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 
