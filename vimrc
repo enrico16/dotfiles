@@ -95,12 +95,13 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
-Bundle 'ervandew/screen'
 Bundle 'Vim-R-plugin'
+Bundle 'jalvesaq/screenR'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
 " plugins configuration
 let r_syntax_folding=1 " R code folding
+let vimrplugin_source="~/.vim/bundle/screenR/screenR.vim" "Vim-R-plugin to use screen, not tmux
 
 " advanced stuff
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 

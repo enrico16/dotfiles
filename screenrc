@@ -68,6 +68,7 @@ termcapinfo vt100 dl=5\E[M
 hardstatus off
 # Set the hardstatus prop on gui terms to set the titlebar/icon title
 termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+
 # use this for the hard status string
 #hardstatus string "%h%? users: %u%?"
 
@@ -75,7 +76,6 @@ termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
 # windownames and highlighting the current windowname in blue. (This is only
 # enabled if there is no hardstatus setting for your terminal)
 #
-#hardstatus lastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 hardstatus alwayslastline "%{b dd} %{b rd}%H%{b dd} | %c %{d}| %d/%m/%Y %{d}| %l %{d}| %-Lw%{=b Bd}%50>%n%f* %t%{-}%+Lw%<"
 
 # set these terminals up to be 'optimal' instead of vt100
@@ -89,14 +89,13 @@ termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 # To get screen to add lines to xterm's scrollback buffer, uncomment the
 # following termcapinfo line which tells xterm to use the normal screen buffer
 # (which has scrollback), not the alternate screen buffer.
-#
 termcapinfo xterm|xterms|xs|rxvt ti@:te@
 
 # Enable non-blocking mode to better cope with flaky ssh connections.
 defnonblock 5
 
-# Enable scrolling with mouse and keyboard
-termcapinfo xterm* ti@:te@
+# Enable mouse to switch between panels
+mousetrack on
 
 # ------------------------------------------------------------------------------
 # STARTUP SCREENS
