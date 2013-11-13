@@ -15,6 +15,11 @@ options(stringsAsFactors=FALSE)
 library(vimcom)
 library(colorout)
 library(setwidth)
+library(reshape2)
+library(plyr)
+library(stringr)
+library(gplots)
+library(ggplot2)
 
 # sources
 source("http://bioconductor.org/biocLite.R")
