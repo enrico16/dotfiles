@@ -7,5 +7,7 @@ Configuration files for:
 - git
 - R
 - screen
+- tmux
 - vim
+- Xfce
 - xmodmap
