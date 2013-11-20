@@ -1,0 +1,11 @@
+[Entry 0]
+Icon=iceweasel
+Exec=iceweasel
+Path=/home/enrico
+Terminal=false
+StartupNotify=true
+
+[Global]
+MoveFirst=false
+ArrowPosition=0
+

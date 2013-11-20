@@ -1,0 +1,26 @@
+gtk_color_scheme = "notes_fg_color:#f7f7ebeb9696\nnotes_bg_color:#690963ef3fc9\nnotes_base_color:#f7f7ebeb9696\nnotes_text_color:#690963ef3fc9\nnotes_selected_bg_color:#88dc8236531d\nnotes_selected_fg_color:#f7f7ebeb9696"
+style "notes-default" {
+xthickness = 1
+ythickness = 1
+fg[NORMAL] = @notes_fg_color
+fg[ACTIVE] = @notes_fg_color
+fg[PRELIGHT] = @notes_fg_color
+fg[SELECTED] = @notes_selected_fg_color
+fg[INSENSITIVE] = shade(3.0,@notes_fg_color)
+bg[NORMAL] = @notes_bg_color
+bg[ACTIVE] = shade(1.0233,@notes_bg_color)
+bg[PRELIGHT] = mix(0.90,shade(1.1,@notes_bg_color),@notes_selected_bg_color)
+bg[SELECTED] = @notes_selected_bg_color
+bg[INSENSITIVE] = shade(1.03,@notes_bg_color)
+base[NORMAL] = @notes_base_color
+base[ACTIVE] = shade(0.65,@notes_base_color)
+base[PRELIGHT] = @notes_base_color
+base[SELECTED] = @notes_selected_bg_color
+base[INSENSITIVE] = shade(1.025,@notes_bg_color)
+text[NORMAL] = @notes_text_color
+text[ACTIVE] = shade(0.95,@notes_base_color)
+text[PRELIGHT] = @notes_text_color
+text[SELECTED] = @notes_selected_fg_color
+text[INSENSITIVE] = mix(0.675,shade(0.95,@notes_bg_color),@notes_fg_color)
+}
+widget "xfce4-notes-plugin*" style "notes-default"

@@ -1,0 +1,11 @@
+[Entry 0]
+Icon=mendeleydesktop
+Exec=mendeleydesktop
+Path=/home/enrico
+Terminal=false
+StartupNotify=false
+
+[Global]
+MoveFirst=false
+ArrowPosition=0
+

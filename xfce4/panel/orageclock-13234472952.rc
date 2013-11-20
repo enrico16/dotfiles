@@ -1,0 +1,16 @@
+show_frame=false
+fg_set=false
+bg_set=false
+timezone=/usr/share/zoneinfo/Europe/London
+width_set=false
+height_set=false
+show0=true
+data0=%H:%M
+font0=Sans 7
+show1=true
+show2=false
+tooltip=%A %d %B %Y
+hib_timing=false
+data1=%d/%m/%y
+font1=Sans 7
+
