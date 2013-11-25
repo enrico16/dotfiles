@@ -124,6 +124,7 @@ then
 else
 	export TERM=xterm-256color
 fi
+
 # Set vim mode
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
