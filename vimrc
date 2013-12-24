@@ -73,6 +73,9 @@ nnoremap tt :tabnew<Space>
 nnoremap ss :split<Space>
 nnoremap vv :vsplit<Space>
 nnoremap <C-n> :NERDTreeToggle<CR>
+" tab navigation (like vimium)
+nnoremap J :tabprevious<CR>
+nnoremap K :tabnext<CR>
 " clear highlights wth Ctrl-l
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " spell check with F7
@@ -103,5 +106,7 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box'
 let r_syntax_folding=1 " R code folding
 
 " advanced stuff
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " jump to the last position when reopening a file 
-cnoremap w!! w !sudo tee > /dev/null % "allows to write read-only wile with :w!!
+" jump to the last position when reopening a file
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"allows to write read-only wile with :w!!
+cnoremap w!! w !sudo tee > /dev/null %

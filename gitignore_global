@@ -4,6 +4,7 @@
 !*.bib
 !*.conf
 !*.pl
+!*.py
 !*.md
 !*.R
 !*.sh
