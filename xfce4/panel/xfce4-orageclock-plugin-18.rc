@@ -1,7 +1,7 @@
 show_frame=false
 fg_set=false
 bg_set=false
-timezone=Europe/Rome
+timezone=Europe/London
 width_set=false
 height_set=false
 data0=%H:%M
