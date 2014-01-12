@@ -109,6 +109,6 @@ let r_syntax_folding=1 " R code folding
 
 " advanced stuff
 " jump to the last position when reopening a file
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "allows to write read-only wile with :w!!
 cnoremap w!! w !sudo tee > /dev/null %
