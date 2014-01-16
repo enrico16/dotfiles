@@ -8,18 +8,11 @@
 # options
 options(repos="http://cran.ma.imperial.ac.uk")
 options(BioC_mirror="http://mirrors.ebi.ac.uk/bioconductor/")
-#options(width=150)
-options(stringsAsFactors=FALSE)
 
 # libraries
 library(vimcom)
 library(colorout)
 library(setwidth)
-library(reshape2)
-library(plyr)
-library(stringr)
-library(gplots)
-library(ggplot2)
 
 # sources
 source("http://bioconductor.org/biocLite.R")
