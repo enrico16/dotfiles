@@ -10,9 +10,9 @@ options(repos="http://cran.ma.imperial.ac.uk")
 options(BioC_mirror="http://mirrors.ebi.ac.uk/bioconductor/")
 
 # libraries
-library(vimcom)
-library(colorout)
 library(setwidth)
+library(colorout)
+library(vimcom.plus)
 
 # sources
 source("http://bioconductor.org/biocLite.R")

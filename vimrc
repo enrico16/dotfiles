@@ -104,8 +104,11 @@ Bundle 'tomasr/molokai'
 Bundle 'junegunn/seoul256.vim'
 Bundle 'trapd00r/neverland-vim-theme'
 
-" plugins configuration
-let r_syntax_folding=1 " R code folding
+" Vim-R-plugin configuration
+let r_syntax_folding = 1
+let vimrplugin_assign = 0
+let vimrplugin_vsplit = 0
+let vimrplugin_permanent_libs = "base,stats,graphics,grDevices,utils,datasets,methods,reshape2,plyr,dplyr,stringr,ggplot2"
 
 " advanced stuff
 " jump to the last position when reopening a file
