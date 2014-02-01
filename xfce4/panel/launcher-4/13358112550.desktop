@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Type=Application
+Name=Terminal
+Comment=
+Icon=utilities-terminal
+Exec=xfce4-terminal
+Path=
+Terminal=false
+StartupNotify=true
+
