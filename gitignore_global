@@ -10,5 +10,6 @@
 !*.sh
 !*.sty
 !*.tex
+!*.xml
 !*/
 Extra/
