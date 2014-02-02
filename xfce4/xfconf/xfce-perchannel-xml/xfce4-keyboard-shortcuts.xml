@@ -33,11 +33,8 @@
       <property name="&lt;Super&gt;BackSpace" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Super&gt;Delete" type="string" value="xfce4-taskmanager"/>
       <property name="&lt;Super&gt;End" type="string" value="xkill"/>
-      <property name="&lt;Super&gt;a" type="string" value="audacious"/>
       <property name="XF86Launch1" type="string" value="audacious"/>
       <property name="&lt;Super&gt;Return" type="string" value="xfce4-popup-applicationsmenu"/>
-      <property name="&lt;Super&gt;x" type="string" value="xchat"/>
-      <property name="&lt;Super&gt;p" type="string" value="pidgin"/>
       <property name="&lt;Super&gt;b" type="string" value="google-chrome"/>
       <property name="XF86HomePage" type="string" value="google-chrome"/>
       <property name="XF86Mail" type="string" value="google-chrome"/>
@@ -46,12 +43,12 @@
         <property name="startup-notify" type="bool" value="true"/>
       </property>
       <property name="&lt;Super&gt;e" type="string" value="mousepad"/>
-      <property name="&lt;Super&gt;g" type="string" value="geany"/>
       <property name="&lt;Super&gt;r" type="string" value="xfce4-terminal -e R"/>
       <property name="&lt;Super&gt;c" type="string" value="gnome-calculator"/>
       <property name="&lt;Super&gt;Escape" type="string" value="xflock4"/>
       <property name="&lt;Primary&gt;Print" type="string" value="xfce4-screenshooter -r"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;t" type="string" value="xfce4-terminal -e &quot;tmux new -s new&quot;"/>
+      <property name="&lt;Super&gt;m" type="string" value="audacious"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

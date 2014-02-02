@@ -18,5 +18,5 @@ ColumnCPU=TRUE
 ColumnPriority=FALSE
 SortColumn=5
 SortType=1
-WindowWidth=1280
-WindowHeight=752
+WindowWidth=528
+WindowHeight=262
