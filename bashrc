@@ -85,7 +85,7 @@ alias la='ls -a'
 alias lla='ls -la'
 
 # alias for upgrading system
-alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --purge && sudo apt-get clean'
+alias debupgrade='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --purge && sudo apt-get clean'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.

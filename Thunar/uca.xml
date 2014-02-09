@@ -1,0 +1,30 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>Terminal</icon>
+	<name>Terminal</name>
+	<unique-id>1391943988656716-3</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>system-search</icon>
+	<name>Find</name>
+	<unique-id>1391944019240790-4</unique-id>
+	<command>catfish --path=%f</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>file-manager</icon>
+	<name>Root</name>
+	<unique-id>1391943793498958-1</unique-id>
+	<command>gksudo thunar </command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>
