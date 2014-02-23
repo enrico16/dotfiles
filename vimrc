@@ -75,8 +75,8 @@ nnoremap ss :split<Space>
 nnoremap vv :vsplit<Space>
 "nnoremap <C-n> :NERDTreeToggle<CR>
 " tab navigation (like vimium)
-nnoremap J :tabnext<CR>
-nnoremap K :tabprevious<CR>
+nnoremap <silent> J :tabnext<CR>
+nnoremap <silent> K :tabprevious<CR>
 " clear highlights wth Ctrl-l
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " spell check with F7
