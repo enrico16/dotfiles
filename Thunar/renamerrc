@@ -1,6 +1,6 @@
 [Configuration]
 LastActiveMode=THUNAR_RENAMER_MODE_BOTH
-LastActiveRenamer=ThunarSbrReplaceRenamer
+LastActiveRenamer=ThunarSbrInsertRenamer
 
 [ThunarSbrRemoveRenamer]
 EndOffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
@@ -14,15 +14,15 @@ Mode=THUNAR_SBR_DATE_MODE_MTIME
 OffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
 Format=%Y%m%d.
 
-[ThunarSbrInsertRenamer]
-Offset=4
-Mode=THUNAR_SBR_INSERT_MODE_INSERT
-OffsetMode=THUNAR_SBR_OFFSET_MODE_RIGHT
-Text=.v10.1
-
 [ThunarSbrReplaceRenamer]
 Regexp=FALSE
 Replacement=Fig1
 CaseSensitive=FALSE
 Pattern=Fig3
+
+[ThunarSbrInsertRenamer]
+Offset=4
+Mode=THUNAR_SBR_INSERT_MODE_INSERT
+OffsetMode=THUNAR_SBR_OFFSET_MODE_RIGHT
+Text=.v10.4
 

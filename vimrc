@@ -64,6 +64,7 @@ set splitright
 set splitbelow
 
 " theme
+set t_Co=256
 set background=dark
 colorscheme molokai
 
@@ -72,10 +73,10 @@ colorscheme molokai
 nnoremap tt :tabnew<Space>
 nnoremap ss :split<Space>
 nnoremap vv :vsplit<Space>
-nnoremap <C-n> :NERDTreeToggle<CR>
+"nnoremap <C-n> :NERDTreeToggle<CR>
 " tab navigation (like vimium)
-nnoremap J :tabprevious<CR>
-nnoremap K :tabnext<CR>
+nnoremap J :tabnext<CR>
+nnoremap K :tabprevious<CR>
 " clear highlights wth Ctrl-l
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " spell check with F7
@@ -89,20 +90,20 @@ call vundle#rc()
 " plugins
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'itchyny/lightline.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'ervandew/supertab'
+"Bundle 'scrooloose/nerdtree'
+"Bundle 'scrooloose/nerdcommenter'
+"Bundle 'kien/ctrlp.vim'
+"Bundle 'ervandew/supertab'
 Bundle 'Vim-R-plugin'
-Bundle 'jalvesaq/screenR'
-Bundle 'LaTeX-Box-Team/LaTeX-Box'
-Bundle 'flazz/vim-colorschemes'
+"Bundle 'jalvesaq/screenR'
+"Bundle 'LaTeX-Box-Team/LaTeX-Box'
+"Bundle 'flazz/vim-colorschemes'
 Bundle 'tomasr/molokai'
-Bundle 'junegunn/seoul256.vim'
-Bundle 'trapd00r/neverland-vim-theme'
+"Bundle 'junegunn/seoul256.vim'
+"Bundle 'trapd00r/neverland-vim-theme'
 
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
