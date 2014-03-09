@@ -21,7 +21,7 @@ set backspace=indent,eol,start "backspace behaviour
 set wrap "wrap lines
 set autowrite "automatically save before :next and :make 
 set hidden "hide abandoned buffers, don't close them
-set clipboard=unnamedplus "use system clipboard
+"set clipboard=unnamedplus "use system clipboard
 set pastetoggle=<F2> "enter paste mode
 let mapleader=","
 let maplocalleader=";"
