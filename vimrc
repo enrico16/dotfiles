@@ -31,6 +31,7 @@ set showcmd "show commands
 set showmatch "show matching bracket
 set ruler "show cursor position
 set number "show line numbers
+set cursorline "highlight current line
 set cmdheight=1 "command line height
 set laststatus=2 "show status line
 
