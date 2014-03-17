@@ -42,12 +42,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -85,7 +85,7 @@ alias la='ls -a'
 alias lla='ls -la'
 
 # alias for upgrading system
-alias debupgrade='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --purge && sudo apt-get clean'
+alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --purge && sudo apt-get clean'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -102,29 +102,45 @@ fi
 #    . /etc/bash_completion
 #fi
 
-# Custom PS1
+# prompt
 export PS1='\[\e[1m\]┌─[\u@\h][\w]\n\[\e[1m\]└─[\$]\[\e[0m\] '
 
-# Additional PATHS
-export PATH=$PATH:$HOME/.scripts/
-export PATH=$PATH:$HOME/PhD/Scripts/Perl/
-export PATH=$PATH:$HOME/.homer/bin/
-export PATH=$PATH:$HOME/.bedtools/bin/
-export PATH=$PATH:$HOME/.bedops/bin/
-export PATH=$PATH:$HOME/.weblogo/
-export PATH=$PATH:$HOME/.meme/bin/
-export PATH=$PATH:$HOME/.blat/
-export PATH=$PATH:$HOME/.block_bootstrap/
-export PATH=$PATH:$HOME/.sopcast/
+# bin
+export PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/bin:$PATH
 
-# Set TERM to 256 colors inside and outside of screen
-if [ "screen" = "$TERM" ]
-then
-	export TERM=screen-256color
-else
-	export TERM=xterm-256color
-fi
+# lib
+export LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
+export LD_LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
+
+# include
+export C_INCLUDE_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/include
+export CPLUS_INCLUDE_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/include
+
+# man
+export MANPATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/man:$MANPATH
+
+# flags
+export CFLAGS=-I/GWD/bioinfo/projects/cb-software/personal/ef884766/include
+export LDFLAGS=-L/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
+
+# Perlbrew
+source /GWD/bioinfo/projects/cb-software/personal/ef884766/perl5/etc/bashrc
+
+# Oracle Database (MetaBaseR)
+export ORACLE_HOME=/GWD/bioinfo/share/oracle/current
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/bix-analysis-stv/2014/commonData/MetaBaseR/oracle
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/cb-software/personal/ef884766/oracle
+
+# Oracle Java (rJava)
+export JAVA_HOME=/GWD/bioinfo/projects/cb-software/personal/ef884766/jdk/jre
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/cb-software/personal/ef884766/jdk/jre/lib/amd64/server
+
+# Fix backspace problem
+stty erase ^?
 
 # Set vim mode
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
+
+# Proxy configuration
+source ~/.proxyrc
