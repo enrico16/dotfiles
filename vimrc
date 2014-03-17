@@ -22,7 +22,6 @@ set wrap "wrap lines
 set autowrite "automatically save before :next and :make 
 set hidden "hide abandoned buffers, don't close them
 "set clipboard=unnamedplus "use system clipboard
-"set clipboard=exclude:.* "don't try connecting to X
 set pastetoggle=<F2> "enter paste mode
 let mapleader=","
 let maplocalleader=";"
@@ -77,8 +76,8 @@ nnoremap ss :split<Space>
 nnoremap vv :vsplit<Space>
 "nnoremap <C-n> :NERDTreeToggle<CR>
 " tab navigation (like vimium)
-nnoremap J :tabnext<CR>
-nnoremap K :tabprevious<CR>
+nnoremap J :tabprevious<CR>
+nnoremap K :tabnext<CR>
 " clear highlights wth Ctrl-l
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " spell check with F7
@@ -99,7 +98,7 @@ Bundle 'itchyny/lightline.vim'
 "Bundle 'scrooloose/nerdcommenter'
 "Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
-Bundle 'Vim-R-plugin'
+Bundle 'jcfaria/Vim-R-plugin'
 "Bundle 'jalvesaq/screenR'
 "Bundle 'LaTeX-Box-Team/LaTeX-Box'
 "Bundle 'flazz/vim-colorschemes'
