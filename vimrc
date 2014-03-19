@@ -17,6 +17,7 @@ set history=1000 "commands in history
 set undolevels=1000 "undo operations
 set mouse=a "enable mouse
 set wildmenu "command completion
+set wildmode=longest,list,full
 set backspace=indent,eol,start "backspace behaviour
 set wrap "wrap lines
 set autowrite "automatically save before :next and :make 
@@ -46,7 +47,7 @@ set smartindent
 set shiftround
 
 " search
-set hlsearch
+"set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -71,12 +72,16 @@ set background=dark
 colorscheme molokai
 
 " custom key mappings
+" easier up and down navigation
+nnoremap j gj
+nnoremap k gk
 " open new files
-nnoremap tt :tabnew<Space>
-nnoremap ss :split<Space>
-nnoremap vv :vsplit<Space>
-"nnoremap <C-n> :NERDTreeToggle<CR>
-" tab navigation (like vimium)
+nnoremap <C-w>t :tabnew<Space>
+nnoremap <C-w>s :split<Space>
+nnoremap <C-w>v :vsplit<Space>
+" tab navigation
+nnoremap <C-w>n :tabnext<CR>
+nnoremap <C-w>p :tabprevious<CR>
 nnoremap J :tabnext<CR>
 nnoremap K :tabprevious<CR>
 " clear highlights wth Ctrl-l
@@ -107,12 +112,16 @@ Bundle 'tomasr/molokai'
 "Bundle 'junegunn/seoul256.vim'
 "Bundle 'trapd00r/neverland-vim-theme'
 Bundle 'wikitopian/hardmode'
+Bundle 'luochen1990/rainbow'
 
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
 let vimrplugin_assign = 0
 let vimrplugin_vsplit = 0
 let vimrplugin_permanent_libs = "base,stats,graphics,grDevices,utils,datasets,methods,reshape2,plyr,dplyr,stringr,ggplot2"
+
+" Rainbow Parentheses Improved configuration
+let g:rainbow_active = 1
 
 " advanced stuff
 " jump to the last position when reopening a file
