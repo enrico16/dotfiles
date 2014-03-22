@@ -1,8 +1,5 @@
 " .vimrc
 
-" debian compatibility
-"runtime! debian.vim
-
 " no vi compatibility
 set nocompatible
 
