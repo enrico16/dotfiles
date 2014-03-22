@@ -32,7 +32,8 @@ set ruler "show cursor position
 set number "show line numbers
 set cursorline "highlight current line
 set cmdheight=1 "command line height
-set laststatus=2 "show status line
+set laststatus=2 "always show status line
+set showtabline=2 "always show tab line
 
 " tabs and indentation
 set tabstop=4
