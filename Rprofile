@@ -12,7 +12,7 @@ options(BioC_mirror="http://mirrors.ebi.ac.uk/bioconductor/")
 # libraries
 library(setwidth)
 library(colorout)
-#library(vimcom.plus)
+library(vimcom.plus)
 
 # sources
 source("http://bioconductor.org/biocLite.R")
