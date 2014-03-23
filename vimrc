@@ -17,11 +17,13 @@ set history=1000 "commands in history
 set undolevels=1000 "undo operations
 set mouse=a "enable mouse
 set wildmenu "command completion
+set wildmode=longest,list,full
 set backspace=indent,eol,start "backspace behaviour
 set wrap "wrap lines
 set autowrite "automatically save before :next and :make 
 set hidden "hide abandoned buffers, don't close them
 "set clipboard=unnamedplus "use system clipboard
+"set clipboard=exclude:.* "don't try connecting to X
 set pastetoggle=<F2> "enter paste mode
 let mapleader=","
 let maplocalleader=";"
@@ -33,7 +35,8 @@ set ruler "show cursor position
 set number "show line numbers
 set cursorline "highlight current line
 set cmdheight=1 "command line height
-set laststatus=2 "show status line
+set laststatus=2 "always show status line
+set showtabline=2 "always show tab line
 
 " tabs and indentation
 set tabstop=4
@@ -45,7 +48,7 @@ set smartindent
 set shiftround
 
 " search
-set hlsearch
+"set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -70,14 +73,18 @@ set background=dark
 colorscheme molokai
 
 " custom key mappings
+" easier up and down navigation
+nnoremap j gj
+nnoremap k gk
 " open new files
-nnoremap tt :tabnew<Space>
-nnoremap ss :split<Space>
-nnoremap vv :vsplit<Space>
-"nnoremap <C-n> :NERDTreeToggle<CR>
-" tab navigation (like vimium)
-nnoremap <silent> J :tabnext<CR>
-nnoremap <silent> K :tabprevious<CR>
+nnoremap <C-w>t :tabnew<Space>
+nnoremap <C-w>s :split<Space>
+nnoremap <C-w>v :vsplit<Space>
+" tab navigation
+nnoremap <C-w>n :tabnext<CR>
+nnoremap <C-w>p :tabprevious<CR>
+nnoremap J :tabnext<CR>
+nnoremap K :tabprevious<CR>
 " clear highlights wth Ctrl-l
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " spell check with F7
@@ -97,20 +104,25 @@ Bundle 'itchyny/lightline.vim'
 "Bundle 'scrooloose/nerdtree'
 "Bundle 'scrooloose/nerdcommenter'
 "Bundle 'kien/ctrlp.vim'
-"Bundle 'ervandew/supertab'
-Bundle 'Vim-R-plugin'
+Bundle 'ervandew/supertab'
+Bundle 'jcfaria/Vim-R-plugin'
 "Bundle 'jalvesaq/screenR'
 "Bundle 'LaTeX-Box-Team/LaTeX-Box'
 "Bundle 'flazz/vim-colorschemes'
 Bundle 'tomasr/molokai'
 "Bundle 'junegunn/seoul256.vim'
 "Bundle 'trapd00r/neverland-vim-theme'
+Bundle 'wikitopian/hardmode'
+Bundle 'luochen1990/rainbow'
 
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
 let vimrplugin_assign = 0
 let vimrplugin_vsplit = 0
 let vimrplugin_permanent_libs = "base,stats,graphics,grDevices,utils,datasets,methods,reshape2,plyr,dplyr,stringr,ggplot2"
+
+" Rainbow Parentheses Improved configuration
+let g:rainbow_active = 1
 
 " advanced stuff
 " jump to the last position when reopening a file
