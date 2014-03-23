@@ -26,6 +26,6 @@ MiscToolbarDefault=FALSE
 ColorForeground=#bfbfbfbfbfbf
 ColorBackground=#121212121212
 ColorCursor=#808080808080
-ColorPalette=#121112;#D7005F;#87FF00;#FF8700;#005F87;#AF5FFF;#81C1C1;#AFAF87;#6C6C6C;#D74083;#93FF19;#FF9926;#387BAB;#B973FF;#5FD7FF;#D0D0D0
+ColorPalette=#303030303030;#d7d700005f5f;#8787ffff0000;#ffff87870000;#00005f5f8787;#afaf5f5fffff;#8181c1c1c1c1;#afafafaf8787;#6c6c6c6c6c6c;#d7d740408383;#9393ffff1919;#ffff99992626;#38387b7babab;#b9b97373ffff;#5f5fd7d7ffff;#d0d0d0d0d0d0
 TabActivityColor=#aaaa00000000
 
