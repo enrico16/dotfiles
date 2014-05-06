@@ -21,6 +21,7 @@ set autowrite "automatically save before :next and :make
 set hidden "hide abandoned buffers, don't close them
 "set clipboard=unnamedplus "use system clipboard
 "set clipboard=exclude:.* "don't try connecting to X
+set iskeyword-=_ " treat _ as . and -
 set pastetoggle=<F2> "enter paste mode
 let mapleader=","
 let maplocalleader=";"
@@ -52,9 +53,9 @@ set smartcase
 set wrapscan
 
 " syntax highlighting
-syntax enable
-filetype plugin on
 filetype indent on
+filetype plugin on
+syntax enable
 
 " folding
 set foldmethod=syntax

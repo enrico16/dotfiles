@@ -111,8 +111,8 @@ export PS1='\[\e[1m\]┌─[\u@\h][\w]\n\[\e[1m\]└─[\$]\[\e[0m\] '
 export PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/bin:$PATH
 
 # lib
-export LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
-export LD_LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
+export LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib64::/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
+export LD_LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib64:/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
 
 # include
 export C_INCLUDE_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/include
@@ -122,8 +122,9 @@ export CPLUS_INCLUDE_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/in
 export MANPATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/man:$MANPATH
 
 # flags
-export CFLAGS=-I/GWD/bioinfo/projects/cb-software/personal/ef884766/include
-export LDFLAGS=-L/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
+export CFLAGS="-I/GWD/bioinfo/projects/cb-software/personal/ef884766/include"
+export CPPFLAGS="-I/GWD/bioinfo/projects/cb-software/personal/ef884766/include"
+export LDFLAGS="-L/GWD/bioinfo/projects/cb-software/personal/ef884766/lib64 -L/GWD/bioinfo/projects/cb-software/personal/ef884766/lib" 
 
 # Perlbrew
 source /GWD/bioinfo/projects/cb-software/personal/ef884766/perl5/etc/bashrc
