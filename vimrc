@@ -53,12 +53,11 @@ set smartcase
 set wrapscan
 
 " syntax highlighting
-filetype indent on
-filetype plugin on
 syntax enable
+filetype plugin indent on
 
 " folding
-set foldmethod=syntax
+set foldmethod=indent
 set nofoldenable
 
 " splits
@@ -92,10 +91,9 @@ nnoremap <silent> <F7> :setlocal spell! spelllang=en_gb<CR>
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-
 " plugins
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-sensible'
+"Bundle 'tpope/vim-sensible'
 "Bundle 'tpope/vim-surround'
 "Bundle 'tpope/vim-fugitive'
 Bundle 'itchyny/lightline.vim'
@@ -110,8 +108,10 @@ Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'tomasr/molokai'
 "Bundle 'junegunn/seoul256.vim'
 "Bundle 'trapd00r/neverland-vim-theme'
-Bundle 'wikitopian/hardmode'
-Bundle 'luochen1990/rainbow'
+"Bundle 'wikitopian/hardmode'
+Bundle 'kien/rainbow_parentheses.vim'
+" restore filetype recognition
+filetype plugin indent on
 
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
@@ -119,8 +119,11 @@ let vimrplugin_assign = 0
 let vimrplugin_vsplit = 0
 let vimrplugin_permanent_libs = "base,stats,graphics,grDevices,utils,datasets,methods,reshape2,plyr,dplyr,stringr,ggplot2"
 
-" Rainbow Parentheses Improved configuration
-let g:rainbow_active = 1
+" Rainbow Parentheses configuration
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " advanced stuff
 " jump to the last position when reopening a file
