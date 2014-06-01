@@ -19,8 +19,7 @@ set backspace=indent,eol,start "backspace behaviour
 set wrap "wrap lines
 set autowrite "automatically save before :next and :make 
 set hidden "hide abandoned buffers, don't close them
-"set clipboard=unnamedplus "use system clipboard
-"set clipboard=exclude:.* "don't try connecting to X
+set iskeyword-=_ "treat _ as . and -
 set pastetoggle=<F2> "enter paste mode
 let mapleader=","
 let maplocalleader=";"
@@ -53,11 +52,10 @@ set wrapscan
 
 " syntax highlighting
 syntax enable
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " folding
-set foldmethod=syntax
+set foldmethod=indent
 set nofoldenable
 
 " splits
@@ -70,6 +68,8 @@ set background=dark
 colorscheme molokai
 
 " custom key mappings
+" Y to yank to end of line
+nnoremap Y y$
 " easier up and down navigation
 nnoremap j gj
 nnoremap k gk
@@ -91,10 +91,9 @@ nnoremap <silent> <F7> :setlocal spell! spelllang=en_gb<CR>
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-
 " plugins
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-sensible'
+"Bundle 'tpope/vim-sensible'
 "Bundle 'tpope/vim-surround'
 "Bundle 'tpope/vim-fugitive'
 Bundle 'itchyny/lightline.vim'
@@ -109,17 +108,22 @@ Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'tomasr/molokai'
 "Bundle 'junegunn/seoul256.vim'
 "Bundle 'trapd00r/neverland-vim-theme'
-Bundle 'wikitopian/hardmode'
-Bundle 'luochen1990/rainbow'
+"Bundle 'wikitopian/hardmode'
+Bundle 'kien/rainbow_parentheses.vim'
+" restore filetype recognition
+filetype plugin indent on
 
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
 let vimrplugin_assign = 0
 let vimrplugin_vsplit = 0
 let vimrplugin_permanent_libs = "base,stats,graphics,grDevices,utils,datasets,methods,reshape2,plyr,dplyr,stringr,ggplot2"
-
-" Rainbow Parentheses Improved configuration
-let g:rainbow_active = 1
+"
+" Rainbow Parentheses configuration
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " advanced stuff
 " jump to the last position when reopening a file
