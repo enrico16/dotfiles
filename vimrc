@@ -19,8 +19,6 @@ set backspace=indent,eol,start "backspace behaviour
 set wrap "wrap lines
 set autowrite "automatically save before :next and :make 
 set hidden "hide abandoned buffers, don't close them
-"set clipboard=unnamedplus "use system clipboard
-"set clipboard=exclude:.* "don't try connecting to X
 set iskeyword-=_ " treat _ as . and -
 set pastetoggle=<F2> "enter paste mode
 let mapleader=","
@@ -70,6 +68,8 @@ set background=dark
 colorscheme molokai
 
 " custom key mappings
+" Y to yank to end of line
+nnoremap Y y$
 " easier up and down navigation
 nnoremap j gj
 nnoremap k gk
