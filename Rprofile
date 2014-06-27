@@ -16,6 +16,7 @@ library(colorout)
 library(vimcom.plus)
 
 # sources
+source("~/.Rproxy")
 source("http://bioconductor.org/biocLite.R")
 
 .First <- function() {
