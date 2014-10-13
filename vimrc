@@ -108,6 +108,7 @@ Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'tomasr/molokai'
 "Bundle 'junegunn/seoul256.vim'
 "Bundle 'trapd00r/neverland-vim-theme'
+"Bundle 'altercation/vim-colors-solarized'
 "Bundle 'wikitopian/hardmode'
 Bundle 'kien/rainbow_parentheses.vim'
 " restore filetype recognition
