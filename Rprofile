@@ -13,7 +13,7 @@ options(BioC_mirror="http://mirrors.ebi.ac.uk/bioconductor/")
 # libraries
 library(setwidth)
 library(colorout)
-library(vimcom.plus)
+library(vimcom)
 
 # sources
 source("~/.Rproxy")

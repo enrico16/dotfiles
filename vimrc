@@ -108,6 +108,7 @@ Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'tomasr/molokai'
 "Bundle 'junegunn/seoul256.vim'
 "Bundle 'trapd00r/neverland-vim-theme'
+"Bundle 'altercation/vim-colors-solarized'
 "Bundle 'wikitopian/hardmode'
 Bundle 'kien/rainbow_parentheses.vim'
 " restore filetype recognition
@@ -116,8 +117,12 @@ filetype plugin indent on
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
 let vimrplugin_assign = 0
-let vimrplugin_vsplit = 0
-let vimrplugin_permanent_libs = "base,stats,graphics,grDevices,utils,datasets,methods,reshape2,plyr,dplyr,stringr,ggplot2"
+let vimrplugin_vsplit = 1
+let vimrplugin_tmux_title = "automatic"
+map <silent> <LocalLeader>rH :call RAction("head")<CR>
+
+" Supertab configuration
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " Rainbow Parentheses configuration
 "au VimEnter * RainbowParenthesesToggle

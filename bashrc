@@ -80,12 +80,11 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -l'
+alias ll='ls -lh'
 alias la='ls -a'
-alias lla='ls -la'
+alias lla='ls -lha'
+alias llt=' ls -lht'
 
-# alias for upgrading system
-alias upgrade='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove --purge && sudo apt-get clean'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -111,7 +110,7 @@ export PS1='\[\e[1m\]┌─[\u@\h][\w]\n\[\e[1m\]└─[\$]\[\e[0m\] '
 export PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/bin:$PATH
 
 # lib
-export LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib64::/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
+export LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib64:/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
 export LD_LIBRARY_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib64:/GWD/bioinfo/projects/cb-software/personal/ef884766/lib
 
 # include
@@ -131,12 +130,17 @@ source /GWD/bioinfo/projects/cb-software/personal/ef884766/perl5/etc/bashrc
 
 # Oracle Database (MetaBaseR)
 export ORACLE_HOME=/GWD/bioinfo/share/oracle/current
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/bix-analysis-stv/2014/commonData/MetaBaseR/oracle
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/cb-software/personal/ef884766/oracle
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/cb-software/personal/ef884766/opt/oracle
 
 # Oracle Java (rJava)
-export JAVA_HOME=/GWD/bioinfo/projects/cb-software/personal/ef884766/jdk/jre
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/cb-software/personal/ef884766/jdk/jre/lib/amd64/server
+export JAVA_HOME=/GWD/bioinfo/projects/cb-software/personal/ef884766/opt/jdk/jre
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/cb-software/personal/ef884766/opt/jdk/jre/lib/amd64/server
+
+# Sun Grid Engine
+source /GWD/appbase/projects/lsf/SGE/6.2u5/default/common/settings.sh
+
+# Vim-R-plugin
+alias vim='vim --servername VIM'
 
 # Fix backspace problem
 stty erase ^?
