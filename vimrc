@@ -44,7 +44,7 @@ set smartindent
 set shiftround
 
 " search
-"set hlsearch
+set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -99,7 +99,7 @@ Bundle 'gmarik/vundle'
 Bundle 'itchyny/lightline.vim'
 "Bundle 'scrooloose/nerdtree'
 "Bundle 'scrooloose/nerdcommenter'
-"Bundle 'kien/ctrlp.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'jcfaria/Vim-R-plugin'
 "Bundle 'jalvesaq/screenR'
@@ -121,8 +121,11 @@ let vimrplugin_vsplit = 1
 let vimrplugin_tmux_title = "automatic"
 map <silent> <LocalLeader>rH :call RAction("head")<CR>
 
-" Supertab configuration
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" CtrlP configuraton
+let g:ctrlp_follow_symlinks = 2
+let g:ctrlp_user_command = 'find %s -name "*.R" -or -name "*.pl" -or -name "*.sh" -or -name "*.txt" -or -name "*.csv" -or -name "*.tsv" -or -name "*rc" -or -name "*.conf" -type f'
+let g:ctrlp_map = ''
+noremap <C-p> :CtrlP /home/ef884766/<CR>
 
 " Rainbow Parentheses configuration
 "au VimEnter * RainbowParenthesesToggle
