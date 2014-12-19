@@ -89,29 +89,29 @@ nnoremap <silent> <F7> :setlocal spell! spelllang=en_gb<CR>
 
 " vundle configuration
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " plugins
-Bundle 'gmarik/vundle'
-"Bundle 'tpope/vim-sensible'
-"Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-fugitive'
-Bundle 'itchyny/lightline.vim'
-"Bundle 'scrooloose/nerdtree'
-"Bundle 'scrooloose/nerdcommenter'
-"Bundle 'kien/ctrlp.vim'
-Bundle 'ervandew/supertab'
-Bundle 'jcfaria/Vim-R-plugin'
-"Bundle 'jalvesaq/screenR'
-"Bundle 'LaTeX-Box-Team/LaTeX-Box'
-"Bundle 'flazz/vim-colorschemes'
-Bundle 'tomasr/molokai'
-"Bundle 'junegunn/seoul256.vim'
-"Bundle 'trapd00r/neverland-vim-theme'
-"Bundle 'altercation/vim-colors-solarized'
-"Bundle 'wikitopian/hardmode'
-Bundle 'kien/rainbow_parentheses.vim'
-" restore filetype recognition
+Plugin 'gmarik/vundle'
+"Plugin 'tpope/vim-sensible'
+"Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-fugitive'
+Plugin 'itchyny/lightline.vim'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
+Plugin 'jcfaria/Vim-R-plugin'
+"Plugin 'jalvesaq/screenR'
+"Plugin 'LaTeX-Box-Team/LaTeX-Box'
+"Plugin 'flazz/vim-colorschemes'
+Plugin 'tomasr/molokai'
+"Plugin 'junegunn/seoul256.vim'
+"Plugin 'trapd00r/neverland-vim-theme'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'wikitopian/hardmode'
+Plugin 'kien/rainbow_parentheses.vim'
+call vundle#end()
 filetype plugin indent on
 
 " Vim-R-plugin configuration
