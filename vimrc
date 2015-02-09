@@ -82,50 +82,55 @@ nnoremap <C-w>n :tabnext<CR>
 nnoremap <C-w>p :tabprevious<CR>
 nnoremap J :tabnext<CR>
 nnoremap K :tabprevious<CR>
-" clear highlights wth Ctrl-l
-nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+" clear highlights
+nnoremap <silent><C-l> :nohlsearch<CR><C-l>
 " spell check with F7
-nnoremap <silent> <F7> :setlocal spell! spelllang=en_gb<CR>
+nnoremap <silent><F7> :setlocal spell! spelllang=en_gb<CR>
 
 " vundle configuration
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 " plugins
-Bundle 'gmarik/vundle'
-"Bundle 'tpope/vim-sensible'
-"Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-fugitive'
-Bundle 'itchyny/lightline.vim'
-"Bundle 'scrooloose/nerdtree'
-"Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'ervandew/supertab'
-Bundle 'jcfaria/Vim-R-plugin'
-"Bundle 'jalvesaq/screenR'
-"Bundle 'LaTeX-Box-Team/LaTeX-Box'
-"Bundle 'flazz/vim-colorschemes'
-Bundle 'tomasr/molokai'
-"Bundle 'junegunn/seoul256.vim'
-"Bundle 'trapd00r/neverland-vim-theme'
-"Bundle 'altercation/vim-colors-solarized'
-"Bundle 'wikitopian/hardmode'
-Bundle 'kien/rainbow_parentheses.vim'
+Plugin 'gmarik/vundle'
+"Plugin 'tpope/vim-sensible'
+"Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-fugitive'
+Plugin 'itchyny/lightline.vim'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
+Plugin 'jcfaria/Vim-R-plugin'
+"Plugin 'jalvesaq/screenR'
+"Plugin 'LaTeX-Box-Team/LaTeX-Box'
+"Plugin 'flazz/vim-colorschemes'
+Plugin 'tomasr/molokai'
+"Plugin 'junegunn/seoul256.vim'
+"Plugin 'trapd00r/neverland-vim-theme'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'wikitopian/hardmode'
+Plugin 'kien/rainbow_parentheses.vim'
 " restore filetype recognition
 filetype plugin indent on
+
+" SQL default type
+let g:sql_type_default = 'mysql'
 
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
 let vimrplugin_assign = 0
 let vimrplugin_vsplit = 1
 let vimrplugin_tmux_title = "automatic"
-map <silent> <LocalLeader>rH :call RAction("head")<CR>
+map <silent><LocalLeader>rH :call RAction("head")<CR>
 
 " CtrlP configuraton
-let g:ctrlp_follow_symlinks = 2
-let g:ctrlp_user_command = 'find %s -name "*.R" -or -name "*.pl" -or -name "*.sh" -or -name "*.txt" -or -name "*.csv" -or -name "*.tsv" -or -name "*rc" -or -name "*.conf" -type f'
+"let g:ctrlp_user_command = 'find -L %s -type f -name "*.R" -or -name "*.pl" -or -name "*.sh" -or -name "*.txt" -or -name "*.csv" -or -name "*.tsv" -or -name "*rc" -or -name "*.conf"'
 let g:ctrlp_map = ''
-noremap <C-p> :CtrlP /home/ef884766/<CR>
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_show_hidden = 0
+let g:ctrlp_follow_symlinks = 1
+noremap <silent><C-p> :CtrlP /home/ef884766/<CR>
 
 " Rainbow Parentheses configuration
 "au VimEnter * RainbowParenthesesToggle

@@ -128,6 +128,9 @@ export LDFLAGS="-L/GWD/bioinfo/projects/cb-software/personal/ef884766/lib64 -L/G
 # Perlbrew
 source /GWD/bioinfo/projects/cb-software/personal/ef884766/perl5/etc/bashrc
 
+# R
+#export R_LIBS_USER=/GWD/bioinfo/projects/cb-software/personal/ef884766/lib64/R/library
+
 # Oracle Database (MetaBaseR)
 export ORACLE_HOME=/GWD/bioinfo/share/oracle/current
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/cb-software/personal/ef884766/opt/oracle
@@ -139,11 +142,16 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/GWD/bioinfo/projects/cb-software/person
 # Sun Grid Engine
 source /GWD/appbase/projects/lsf/SGE/6.2u5/default/common/settings.sh
 
+# old bioinfo software
+export PATH=$(echo $PATH | sed 's|/GWD/bioinfo/common/scripts:||')
+
 # Vim-R-plugin
 alias vim='vim --servername VIM'
 
 # Fix backspace problem
 stty erase ^?
+# also for sqlite
+alias sqlite3='stty erase ^H && sqlite3'
 
 # Set vim mode
 set -o vi
