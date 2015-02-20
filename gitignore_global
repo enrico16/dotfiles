@@ -8,6 +8,7 @@
 !*.md
 !*.R
 !*.sh
+!*.sql
 !*.sty
 !*.tex
 !*.xml
