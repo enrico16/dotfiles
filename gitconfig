@@ -12,6 +12,7 @@
 [alias]
 	unstage = reset HEAD --
 	last = log -1 HEAD
+	tree = log --graph --decorate --oneline
 [http]
 [color]
 	ui = true
