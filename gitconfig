@@ -12,8 +12,12 @@
 [alias]
 	unstage = reset HEAD --
 	last = log -1 HEAD
-	tree = log --graph --decorate --oneline
-[http]
+	tree = log --graph --decorate --oneline --all
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	undo = reset --soft HEAD~1
 [color]
 	ui = true
 [push]
