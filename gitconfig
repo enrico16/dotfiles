@@ -18,6 +18,7 @@
 	ci = commit
 	st = status
 	undo = reset --soft HEAD~1
+[http]
 [color]
 	ui = true
 [push]
