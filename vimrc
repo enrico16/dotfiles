@@ -16,7 +16,9 @@ set mouse=a "enable mouse
 set wildmenu "command completion
 set wildmode=longest,list,full
 set backspace=indent,eol,start "backspace behaviour
+set formatoptions+=t
 set wrap "wrap lines
+set colorcolumn=80
 set autowrite "automatically save before :next and :make 
 set hidden "hide abandoned buffers, don't close them
 set iskeyword-=_ " treat _ as . and -
@@ -93,29 +95,20 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 " plugins
 Plugin 'gmarik/vundle'
-"Plugin 'tpope/vim-sensible'
-"Plugin 'tpope/vim-surround'
-"Plugin 'tpope/vim-fugitive'
 Plugin 'itchyny/lightline.vim'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'jcfaria/Vim-R-plugin'
-"Plugin 'jalvesaq/screenR'
-"Plugin 'LaTeX-Box-Team/LaTeX-Box'
-"Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
-"Plugin 'junegunn/seoul256.vim'
-"Plugin 'trapd00r/neverland-vim-theme'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'wikitopian/hardmode'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'vim-scripts/dbext.vim'
 " restore filetype recognition
 filetype plugin indent on
 
 " SQL default type
 let g:sql_type_default = 'mysql'
+" dbext configuration
+let g:dbext_default_profile_pegasus = 'type=MYSQL:user=ef884766:passwd="":dbname=pegasus'
 
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
@@ -133,10 +126,10 @@ let g:ctrlp_follow_symlinks = 1
 noremap <silent><C-p> :CtrlP /home/ef884766/<CR>
 
 " Rainbow Parentheses configuration
-"au VimEnter * RainbowParenthesesToggle
-"au Syntax * RainbowParenthesesLoadRound
-"au Syntax * RainbowParenthesesLoadSquare
-"au Syntax * RainbowParenthesesLoadBraces
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " advanced stuff
 " jump to the last position when reopening a file
