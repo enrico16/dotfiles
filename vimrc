@@ -115,6 +115,7 @@ let r_syntax_folding = 1
 let vimrplugin_assign = 0
 let vimrplugin_vsplit = 1
 let vimrplugin_tmux_title = "automatic"
+let vimrplugin_source_args = "echo = TRUE"
 map <silent><LocalLeader>rH :call RAction("head")<CR>
 
 " CtrlP configuraton
