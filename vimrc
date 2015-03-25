@@ -107,6 +107,7 @@ filetype plugin indent on
 
 " recognise markdown files
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.html set syntax=markdown
 
 " SQL default type
 let g:sql_type_default = 'mysql'
