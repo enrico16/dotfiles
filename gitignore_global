@@ -3,6 +3,8 @@
 !*rc
 !*.bib
 !*.conf
+!*.html
+!*.png
 !*.pl
 !*.py
 !*.md

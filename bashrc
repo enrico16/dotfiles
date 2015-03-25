@@ -157,5 +157,8 @@ alias sqlite3='stty erase ^H && sqlite3'
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
+# set default permissions
+umask 022
+
 # Proxy configuration
 source ~/.proxyrc
