@@ -39,7 +39,8 @@ set showtabline=2 "always show tab line
 " tabs and indentation
 set tabstop=4
 set shiftwidth=4
-set noexpandtab
+set softtabstop=4
+set expandtab
 set smarttab
 set autoindent
 set smartindent
