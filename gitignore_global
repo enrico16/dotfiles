@@ -16,4 +16,7 @@
 !*.tex
 !*.xml
 !*/
-Extra/
+data/
+docs/
+documents/
+analysis/
