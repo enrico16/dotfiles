@@ -14,6 +14,7 @@
 !*.sql
 !*.sty
 !*.tex
+!*.xlsx
 !*.xml
 !*/
 data/
