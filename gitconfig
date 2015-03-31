@@ -17,7 +17,7 @@
 	br = branch
 	ci = commit
 	st = status
-	undo = reset --soft HEAD~1
+	undo = reset --soft HEAD~
 [http]
 [color]
 	ui = true
