@@ -3,11 +3,13 @@
 !*rc
 !*.bib
 !*.conf
+!*.docx
 !*.html
 !*.png
 !*.pl
 !*.py
 !*.md
+!*.pptx
 !*.R
 !*.r
 !*.sh
