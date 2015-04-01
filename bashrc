@@ -118,7 +118,7 @@ export C_INCLUDE_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/includ
 export CPLUS_INCLUDE_PATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/include
 
 # man
-export MANPATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/man:$MANPATH
+export MANPATH=/GWD/bioinfo/projects/cb-software/personal/ef884766/share/man:$MANPATH
 
 # flags
 export CFLAGS="-I/GWD/bioinfo/projects/cb-software/personal/ef884766/include"
