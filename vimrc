@@ -18,11 +18,13 @@ set wildmode=longest,list,full
 set backspace=indent,eol,start "backspace behaviour
 set formatoptions+=t
 set wrap "wrap lines
-set colorcolumn=80
+"set colorcolumn=80
 set autowrite "automatically save before :next and :make 
 set hidden "hide abandoned buffers, don't close them
 set iskeyword-=_ " treat _ as . and -
+set isfname+=32 "complete filenames with spaces
 set pastetoggle=<F2> "enter paste mode
+"set clipboard=exclude:.* "improve startup time by ignoring clipboard
 let mapleader=","
 let maplocalleader=";"
 
@@ -99,6 +101,7 @@ Plugin 'gmarik/vundle'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
+Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'jcfaria/Vim-R-plugin'
 Plugin 'tomasr/molokai'
 Plugin 'kien/rainbow_parentheses.vim'
@@ -113,7 +116,7 @@ au BufRead,BufNewFile *.html set syntax=markdown
 " SQL default type
 let g:sql_type_default = 'mysql'
 " dbext configuration
-let g:dbext_default_profile_pegasus = 'type=MYSQL:user=ef884766:passwd="":dbname=pegasus'
+let g:dbext_default_profile_pegasus = 'type=MYSQL:user=ef884766:passwd=""'
 
 " Vim-R-plugin configuration
 let r_syntax_folding = 1
@@ -121,6 +124,7 @@ let vimrplugin_assign = 0
 let vimrplugin_vsplit = 1
 let vimrplugin_tmux_title = "automatic"
 let vimrplugin_source_args = "echo = TRUE"
+let vimrplugin_vimpager = "no"
 map <silent><LocalLeader>rH :call RAction("head")<CR>
 
 " CtrlP configuraton
