@@ -94,10 +94,9 @@ nnoremap <silent><F7> :setlocal spell! spelllang=en_gb<CR>
 
 " vundle configuration
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-" plugins
-Plugin 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
@@ -106,7 +105,7 @@ Plugin 'jcfaria/Vim-R-plugin'
 Plugin 'tomasr/molokai'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-scripts/dbext.vim'
-" restore filetype recognition
+call vundle#end()
 filetype plugin indent on
 
 " recognise markdown files
