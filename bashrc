@@ -158,7 +158,7 @@ set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
 # set default permissions
-umask 022
+umask 002
 
 # Proxy configuration
 source ~/.proxyrc
