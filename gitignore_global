@@ -12,6 +12,7 @@
 !*.md
 !*.pptx
 !*.R
+!*.Rscript
 !*.r
 !*.sh
 !*.sql
