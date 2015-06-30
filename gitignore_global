@@ -21,7 +21,7 @@
 !*.xlsx
 !*.xml
 !*/
-data/
-docs/
-documents/
 analysis/
+data/
+documents/
+old/
