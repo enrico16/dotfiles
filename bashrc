@@ -3,7 +3,7 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+#[ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -103,6 +103,9 @@ fi
 source /GWD/bioinfo/projects/cb-software/personal/ef884766/etc/profile.d/bash_completion.sh
 source /GWD/bioinfo/projects/cb-software/personal/ef884766/etc/profile.d/git-completion.bash
 
+# window title
+export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME}\007"'
+
 # prompt
 export PS1='\[\e[1m\]┌─[\u@\h][\w]\n\[\e[1m\]└─[\$]\[\e[0m\] '
 
@@ -147,6 +150,9 @@ export PATH=$(echo $PATH | sed 's|/GWD/bioinfo/common/scripts:||')
 
 # Vim-R-plugin
 alias vim='vim --servername VIM'
+
+# z
+source /GWD/bioinfo/projects/cb-software/personal/ef884766/etc/z/z.sh
 
 # Fix backspace problem
 stty erase ^?
