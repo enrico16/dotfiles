@@ -28,3 +28,5 @@ Cyan=129,193,193
 BoldCyan=95,215,255
 White=175,175,135
 BoldWhite=208,208,208
+ClicksPlaceCursor=yes
+PgUpDnScroll=yes
