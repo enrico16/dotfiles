@@ -7,8 +7,8 @@
 
 # options
 options(menu.graphics=FALSE)
-options(repos="http://cran.ma.imperial.ac.uk")
-options(BioC_mirror="http://mirrors.ebi.ac.uk/bioconductor/")
+options(repos="http://cran.rstudio.com/")
+options(BioC_mirror="http://bioconductor.org/")
 
 # libraries
 library(setwidth)
