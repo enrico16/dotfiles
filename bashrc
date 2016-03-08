@@ -159,6 +159,9 @@ stty erase ^?
 # also for sqlite
 alias sqlite3='stty erase ^H && sqlite3'
 
+# Search back and forth
+stty -ixon
+
 # Set vim mode
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
