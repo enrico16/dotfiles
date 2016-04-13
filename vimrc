@@ -65,7 +65,7 @@ set splitbelow
 " theme
 set t_Co=256
 set background=dark
-colorscheme molokai
+"colorscheme molokai
 
 " custom key mappings
 " Y to yank to end of line
@@ -86,44 +86,6 @@ nnoremap K :tabprevious<CR>
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " spell check with F7
 nnoremap <silent> <F7> :setlocal spell! spelllang=en_gb<CR>
-
-" vundle configuration
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" plugins
-Plugin 'gmarik/vundle'
-"Plugin 'tpope/vim-sensible'
-"Plugin 'tpope/vim-surround'
-"Plugin 'tpope/vim-fugitive'
-Plugin 'itchyny/lightline.vim'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'scrooloose/nerdcommenter'
-"Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
-Plugin 'jcfaria/Vim-R-plugin'
-"Plugin 'jalvesaq/screenR'
-"Plugin 'LaTeX-Box-Team/LaTeX-Box'
-"Plugin 'flazz/vim-colorschemes'
-Plugin 'tomasr/molokai'
-"Plugin 'junegunn/seoul256.vim'
-"Plugin 'trapd00r/neverland-vim-theme'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'wikitopian/hardmode'
-Plugin 'kien/rainbow_parentheses.vim'
-call vundle#end()
-filetype plugin indent on
-
-" Vim-R-plugin configuration
-let r_syntax_folding = 1
-let vimrplugin_assign = 0
-let vimrplugin_vsplit = 0
-"
-" Rainbow Parentheses configuration
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 " advanced stuff
 " jump to the last position when reopening a file

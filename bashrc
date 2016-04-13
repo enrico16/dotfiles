@@ -208,7 +208,7 @@ alias 'ssh_uk2'='ssh uk2us00013.corpnet2.com'
 # alias cd=cd_func
 
 # Display
-export DISPLAY=:1.0
+export DISPLAY=:3.0
 
 # Window title
 export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME}\007"'
