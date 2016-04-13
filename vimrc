@@ -24,7 +24,7 @@ set hidden "hide abandoned buffers, don't close them
 set iskeyword-=_ " treat _ as . and -
 set isfname+=32 "complete filenames with spaces
 set pastetoggle=<F2> "enter paste mode
-"set clipboard=exclude:.* "improve startup time by ignoring clipboard
+set clipboard=exclude:.* "improve startup time by ignoring clipboard and X server
 let mapleader=","
 let maplocalleader=";"
 
@@ -92,21 +92,14 @@ nnoremap <silent><C-l> :nohlsearch<CR><C-l>
 " spell check with F7
 nnoremap <silent><F7> :setlocal spell! spelllang=en_gb<CR>
 
-" vundle configuration
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
-Plugin 'jalvesaq/R-Vim-runtime'
-Plugin 'jcfaria/Vim-R-plugin'
-Plugin 'tomasr/molokai'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'vim-scripts/dbext.vim'
-call vundle#end()
-filetype plugin indent on
+" vimplug configuartion
+call plug#begin('~/.vim/plugged')
+Plug 'git@github.com:tomasr/molokai.git'
+Plug 'git@github.com:itchyny/lightline.vim.git'
+Plug 'git@github.com:ervandew/supertab.git'
+Plug 'git@github.com:kien/rainbow_parentheses.vim.git'
+Plug 'git@github.com:jalvesaq/Nvim-R.git'
+call plug#end()
 
 " recognise markdown files
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -114,25 +107,18 @@ au BufRead,BufNewFile *.html set syntax=markdown
 
 " SQL default type
 let g:sql_type_default = 'mysql'
-" dbext configuration
-let g:dbext_default_profile_pegasus = 'type=MYSQL:user=ef884766:passwd=""'
 
-" Vim-R-plugin configuration
+" Nvim-R configuration
 let r_syntax_folding = 1
-let vimrplugin_assign = 0
-let vimrplugin_vsplit = 1
-let vimrplugin_tmux_title = "automatic"
-let vimrplugin_source_args = "echo = TRUE"
-let vimrplugin_vimpager = "no"
+let R_in_buffer = 0
+let R_applescript = 0
+let R_tmux_split = 1
+let R_assign = 0
+let R_vsplit = 1
+let R_tmux_title = "automatic"
+let R_source_args = "echo=TRUE, max.deparse.length=1000"
+let R_nvimpager = "tab"
 map <silent><LocalLeader>rH :call RAction("head")<CR>
-
-" CtrlP configuraton
-"let g:ctrlp_user_command = 'find -L %s -type f -name "*.R" -or -name "*.pl" -or -name "*.sh" -or -name "*.txt" -or -name "*.csv" -or -name "*.tsv" -or -name "*rc" -or -name "*.conf"'
-let g:ctrlp_map = ''
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_show_hidden = 0
-let g:ctrlp_follow_symlinks = 1
-noremap <silent><C-p> :CtrlP /home/ef884766/<CR>
 
 " Rainbow Parentheses configuration
 au VimEnter * RainbowParenthesesToggle
@@ -141,7 +127,5 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " advanced stuff
-" jump to the last position when reopening a file
-"au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "allows to write read-only wile with :w!!
 cnoremap w!! w !sudo tee > /dev/null %

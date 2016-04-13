@@ -149,7 +149,7 @@ source /GWD/appbase/projects/lsf/SGE/6.2u5/default/common/settings.sh
 export PATH=$(echo $PATH | sed 's|/GWD/bioinfo/common/scripts:||')
 
 # Vim-R-plugin
-alias vim='vim --servername VIM'
+#alias vim='vim --servername VIM'
 
 # z
 source /GWD/bioinfo/projects/cb-software/personal/ef884766/etc/z/z.sh
