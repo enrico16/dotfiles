@@ -45,7 +45,9 @@ set softtabstop=4
 set expandtab
 set smarttab
 set autoindent
-set smartindent
+set cindent
+set cinkeys-=0#
+set indentkeys-=0#
 set shiftround
 
 " search
