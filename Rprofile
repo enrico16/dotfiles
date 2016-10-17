@@ -7,8 +7,8 @@
 
 # options
 options(menu.graphics=FALSE)
-options(repos="http://cran.rstudio.com/")
-options(BioC_mirror="http://bioconductor.org/")
+options(repos="https://cran.rstudio.com/")
+options(BioC_mirror="https://bioconductor.org/")
 
 # libraries
 library(setwidth)
@@ -16,7 +16,7 @@ library(colorout)
 
 # sources
 source("~/.Rproxy")
-source("http://bioconductor.org/biocLite.R")
+source("https://bioconductor.org/biocLite.R")
 
 .First <- function() {
 	cat("\n   Welcome to R!\n\n")
