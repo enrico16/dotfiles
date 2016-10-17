@@ -94,7 +94,10 @@ nnoremap <silent><C-l> :nohlsearch<CR><C-l>
 " spell check with F7
 nnoremap <silent><F7> :setlocal spell! spelllang=en_gb<CR>
 
-" vimplug configuartion
+" netrw configuration
+let g:netrw_liststyle=3
+
+" vimplug configuration
 call plug#begin('~/.vim/plugged')
 Plug 'git@github.com:tomasr/molokai.git'
 Plug 'git@github.com:itchyny/lightline.vim.git'
